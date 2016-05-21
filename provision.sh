@@ -38,7 +38,7 @@ echo "---------------------------------------------"
 # And that would prevent ~/.bashrc to work properly because \r would be unrecognized
 # Ruby needed for heroku toolbelt
 # notice that this is not a rigorous Ruby install, where we typically use rvm
-apt-get install -y --no-install-recommends heroku-toolbelt build-essential dos2unix python-pip man ruby python-dev python3-dev libpq-dev postgresql postgresql-contrib 
+apt-get install -y --no-install-recommends heroku-toolbelt build-essential dos2unix python-pip man ruby python-dev python3-dev libpq-dev postgresql postgresql-contrib
 # install the cli
 su - vagrant -c "heroku --version > /dev/null 2>&1"
 
@@ -71,10 +71,22 @@ echo "---------------------------------------------"
 su - vagrant -c "/usr/local/bin/virtualenv /home/vagrant/.virtualenvs/${ENV_NAME} --python=/usr/bin/python3 && \
     /home/vagrant/.virtualenvs/${ENV_NAME}/bin/pip install -r /vagrant/requirements.txt"
 
+<<<<<<< HEAD
 su - vagrant -c "cp /vagrant/.bashrc /home/vagrant/.bashrc"
 # If you are on Windows host, with Git checkout windows line terminator style CRLF
 # this comes in handy
 su - vagrant -c "dos2unix  /home/vagrant/.bashrc > /dev/null 2>&1"
+=======
+<<<<<<< HEAD
+su - vagrant -c "cp /vagrant/.bashrc /home/vagrant/.bashrc" 
+=======
+su - vagrant -c "cp /vagrant/.bashrc /home/vagrant/"
+su - vagrant -c "cp /vagrant/gitconfig.sh /home/vagrant/gitconfig"
+# If you are on Windows host, with Git checkout windows line terminator style CRLF
+# this comes in handy
+su - vagrant -c "dos2unix  /home/vagrant/.bashrc > /dev/null 2>&1"
+>>>>>>> c9e0e91... Add feature of git config setup via user input
+>>>>>>> 751d888... Add feature of git config setup via user input
 
 # Activate the virtualenv on first login
 echo "workon ${ENV_NAME}" >> /home/vagrant/.bashrc
