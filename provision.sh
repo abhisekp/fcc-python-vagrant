@@ -37,7 +37,7 @@ apt-get install build-essential python-pip man -y --no-install-recommends
 
 # needed for heroku toolbelt
 # notice that this is not a rigorous Ruby install, where we typically use rvm
-apt-get install -y --no-install-recommends heroku-toolbelt build-essential dos2unix python-pip man ruby python-dev python3-dev libpq-dev postgresql postgresql-contrib
+apt-get install -y --no-install-recommends heroku-toolbelt build-essential dos2unix python-pip man ruby python-dev python3-dev libpq-dev postgresql postgresql-contrib curl
 # install the cli
 su - vagrant -c "heroku --version > /dev/null 2>&1"
 
