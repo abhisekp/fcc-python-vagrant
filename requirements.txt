@@ -2,7 +2,7 @@
 # Note that most of them are required for Heroku
 
 dj-database-url==0.4.1
-Django==1.9.6
+Django==2.2.24
 django-rest==0.0.1
 django-widget-tweaks==1.4.1
 gunicorn==19.4.5
